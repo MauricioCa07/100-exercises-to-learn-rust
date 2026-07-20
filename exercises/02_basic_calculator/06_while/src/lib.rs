@@ -4,9 +4,15 @@ pub fn factorial(n: u32) -> u32 {
     // interprets as "I'll get back to this later", thus
     // suppressing type errors.
     // It panics at runtime.
-    todo!()
-}
+    let mut p: u32 = n;
+    let mut total: u32 = 1;
+    while p > 1 {
+        total = total * p;
+        p = p-1;
+    }
+    return total
 
+}
 #[cfg(test)]
 mod tests {
     use crate::factorial;
